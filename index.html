@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shegol_style</title>
+<style>
+  
+    .row {
+        float: left;
+        width: 25%; 
+    }
+    sPAn{
+      font-weight: bold;
+    }
+    .row {
+  transform: translateY(45%);
+}
+
+.row li {
+  background-color: rgb(13, 209, 29);
+  color: rgb(255, 255, 255); 
+  border: 0.5px solid #cccccc;
+  margin: 4px;
+  max-width: 140px;
+  text-align: center;
+  border: 0.95px solid #07ffff;
+  line-height: 1;
+  border-radius: 15px;  
+  padding: 1px;
+}
+img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 315px;
+    height: 315px;
+    object-fit: contain;
+    background-color: rgba(255, 255, 255, 0.8); 
+    z-index: 9999; 
+}
+#sector2{
+  transform: translateY(3%) !important;
+  line-height: 1.5;
+  font-size: 20px;
+
+
+}
+#sector3{
+  transform: translateY(3%) !important;
+  line-height: 1.5;
+  font-size: 18px;
+}
+#sector4{
+  transform: translateY(3%) !important;
+  line-height: 1.5; 
+  font-size: 18px;
+} 
+#shegol{
+  background-color: rgb(13, 209, 29);
+  color: rgb(255, 255, 255); 
+  border: 0.5px solid #cccccc;
+  margin: 4px;
+  max-width: 140px;
+  text-align: center;
+  border: 0.95px solid #07ffff;
+  line-height: 1;
+  border-radius: 15px;  
+  padding: 1px;
+}
+#shegol {
+  background-color: rgb(58, 8, 196);
+  color: white; /* Изменение цвета текста на белый */
+  padding: 10px; /* Увеличение внутренних отступов */
+  border-radius: 15px;
+  width: auto; /* Автоматическое расширение ширины */
+  max-width: none; /* Отмена максимальной ширины */
+  margin: 4px; /* Отступы вокруг элемента */
+  text-align: center; /* Центрирование текста */
+  border: 1px solid #07ffff; /* Уменьшение толщины границы */
+  line-height: 1.5; /* Увеличение высоты строки */
+}
+
+.active {
+  background-color: rgb(26, 182, 221) !important;
+}
+@media screen and (max-width: 768px) {
+    /* Дополнительные стили для экранов шириной менее 768px */
+  }
+
+
+</style>
+</head>
+<body>
+
+<div class="row">
+  <ul>
+    <sPAn>PRF</sPAn>
+    <li onclick="showImage(this, '1')">EP 3bb</li>
+      <li onclick="showImage(this,'2')">MP 3bb</li>
+      <li onclick="showImage(this,'3')">CO 3bb</li>
+      <li onclick="showImage(this,'4')">BU 43% 2.3bb</li>
+      <li onclick="showImage(this,'5')"> BU vs fish 2,3bb</li>
+      <li onclick="showImage(this,'6')">SB all 2.5bb</li>
+
+  </ul>
+  <ul>
+    <sPAn>RFI vs aggro</sPAn>
+    <li onclick="showImage(this,'7')">EP 3bb</li>
+    <li onclick="showImage(this,'8')">MP 3bb</li>
+    <li onclick="showImage(this,'9')">CO 3bb</li>
+    <li onclick="showImage(this,'10')">BU 3bb</li>
+    <li onclick="showImage(this,'11')">SB 3bb</li>
+  </ul>
+  <ul>
+    <sPAn>New iso</sPAn>
+      <li onclick="showImage(this,'12')">CO,MP vs passive</li>
+      <li onclick="showImage(this,'13')">BU,BB vs passive</li>
+      <li onclick="showImage(this,'14')">CO,MP vs aggro</li>
+      <li onclick="showImage(this,'15')">BU,BB vs aggro</li>
+      <li onclick="showImage(this,'16')">SB (raise/overlimp)</li>
+  </ul>
+  <ul>
+    <sPAn>3b vs fish</sPAn>
+      <li onclick="showImage(this,'17')">vs open 5%</li>
+      <li onclick="showImage(this,'18')">vs open 10%</li>
+      <li onclick="showImage(this,'19')">IP vs passive</li>
+      <li onclick="showImage(this,'20')">IP vs agr</li>
+      <li onclick="showImage(this,'21')">OOP vs passive/aggr</li>
+  </ul>
+</div>
+
+
+<div class="row" id="sector2">
+  <ul>
+    <sPAn>3b IP</sPAn>
+      <li onclick="showImage(this,'22')">vs EP</li>
+      <li onclick="showImage(this,'23')">vs MP</li>
+      <li onclick="showImage(this,'24')">vs CO</li>
+  </ul>
+  <ul>
+    <sPAn>SB 3b</sPAn>
+    <li onclick="showImage(this,'27')">vs EP</li>
+    <li onclick="showImage(this,'28')">vs MP</li>
+    <li onclick="showImage(this,'29')">vs CO</li>
+    <li onclick="showImage(this,'30')">vs BU</li>
+ 
+  </ul>
+  <ul>
+    <sPAn>def BB</sPAn>
+      <li onclick="showImage(this,'31')">call vs EP</li>
+      <li onclick="showImage(this,'32')">3b vs EP</li>
+      <li onclick="showImage(this,'33')">call vs MP</li>
+      <li onclick="showImage(this,'34')">3b vs MP</li>
+      <li onclick="showImage(this,'35')">call vs CO</li>
+      <li onclick="showImage(this,'36')">3b vs CO</li>
+      <li onclick="showImage(this,'37')">call vs BU</li>
+      <li onclick="showImage(this,'38')">3b vs BU</li>
+      <li onclick="showImage(this,'39')">vs SB 3bb (9bb)</li>
+  </ul>
+  <ul>
+    <sPAn>vs 3b OOP</sPAn>
+      <li onclick="showImage(this,'42')">EP deff OOP</li>
+      <li onclick="showImage(this,'43')">MP deff OOP</li>
+      <li onclick="showImage(this,'44')">CO deff OOP</li>
+      <li onclick="showImage(this,'45')">SB deff OOP</li>
+  </ul>
+</div>
+
+
+<div class="row" id="sector3">
+  <ul>
+    <sPAn>vs 3b IP</sPAn>
+      <li onclick="showImage(this,'46')">EP, MP vs BB (4-5%)</li>
+      <li onclick="showImage(this,'47')">EP, MP vs SB (6-7%)</li>
+      <li onclick="showImage(this,'48')">CO vs BB (6%)</li>
+      <li onclick="showImage(this,'49')">CO vs SB (9%)</li>
+      <li onclick="showImage(this,'50')">Bu vs BB (10%)</li>
+      <li onclick="showImage(this,'51')">BU vs Sb (14%)</li>
+  </ul>
+  <ul>
+    <sPAn>vs 4b</sPAn>
+    <li onclick="showImage(this,'52')">Blinds vs early</li>
+    <li onclick="showImage(this,'53')">Blinds vs CO</li>
+    <li onclick="showImage(this,'54')">Blinds vs BU</li>
+    <li onclick="showImage(this,'55')">free vs early</li>
+    <li onclick="showImage(this,'56')">BU vs CO</li>
+    <li onclick="showImage(this,'57')">BB vs SB</li>
+    <li onclick="showImage(this,'58')">vs o4bet as 3b ip EP</li>
+    <li onclick="showImage(this,'59')">vs o4bet as 3b ip BU</li>
+  </ul>
+  <ul>
+    <sPAn>vs Iso 3B</sPAn>
+      <li onclick="showImage(this,'60')">OOP MP-EP (6%)</li>
+      <li onclick="showImage(this,'61')">IP EP-CO (6%)</li>
+
+  </ul>
+  <ul>
+    <sPAn>vs Iso</sPAn>
+      <li onclick="showImage(this,'62')">bb vs btn iso 4bb</li>
+      <li onclick="showImage(this,'63')">bb vs btn iso 5,5bb</li>
+      <li onclick="showImage(this,'64')">bb vs sb iso 4bb</li>
+      <li onclick="showImage(this,'65')">bb vs sb iso 5bb</li>
+  </ul>
+</div>
+
+
+<div class="row" id="sector4">
+  <ul>
+    <sPAn>SQ</sPAn>
+      <li onclick="showImage(this,'66')" >RFI MP OOP IP</li>
+      <li onclick="showImage(this,'67')">PFI CO OOP</li>
+      <li onclick="showImage(this,'68')">vs sqz BU-CO</li>
+  </ul>
+  <ul>
+    <sPAn>Cold 4b</sPAn>
+    <li onclick="showImage(this,'69')">vs EP-MP</li>
+    <li onclick="showImage(this,'70')">vs CO</li>
+    <li onclick="showImage(this,'71')">vs BU</li>
+  </ul>
+  <ul>
+    <sPAn>HA</sPAn>
+      <li onclick="showImage(this,'72')">CC vs 2bb</li>
+      <li onclick="showImage(this,'73')">CC vs 2.5bb</li>
+      <li onclick="showImage(this,'74')">CC vs 3bb</li>
+      <li onclick="showImage(this,'75')">3b range</li>
+      <li onclick="showImage(this,'76')">RFI 3bb</li>
+      <li onclick="showImage(this,'77')">4b</li>
+      <li onclick="showImage(this,'78')">CAll 3b(x4.5)</li>
+      <li onclick="showImage(this,'79')">vs 4b</li>
+  </ul>
+  <ul>
+    <sPAn>Shegol vs fish</sPAn>
+      <li id="shegol" onclick="showImage(this,'80')">https://t.me/logovo_shegla</li>
+  </ul>
+</div>
+
+
+<script>
+
+function showImage(element, imageNumber) {
+  var listItems = document.querySelectorAll('ul li');
+  var targetIndex = parseInt(imageNumber) - 1;
+  var imagePath = 'images/' + imageNumber + '.png';
+  var img = document.createElement('img');
+  img.src = imagePath;
+  img.alt = 'Image ' + imageNumber;
+  img.style.maxWidth = '100%';
+  img.style.display = 'block';
+  img.style.margin = '0 auto';
+  document.body.appendChild(img);
+
+  // Убираем красный цвет с предыдущего активного элемента списка
+  var activeElement = document.querySelector('ul li.active');
+  if (activeElement) {
+    activeElement.classList.remove('active');
+  }
+
+  // Устанавливаем красный цвет на текущем активном элементе списка
+  if (element) {
+    element.classList.add('active');
+  } 
+}
+
+
+
+</script>
+</body>
+</html>
